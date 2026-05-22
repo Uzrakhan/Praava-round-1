@@ -81,7 +81,7 @@ export default function HeroSection() {
           relative
           h-[480px] sm:h-[540px] lg:h-[600px]
           w-full lg:w-auto left-[10%]
-          hidden sm:block
+          hidden md:block
         ">
           {/* BILLING */}
           <FloatingCard
@@ -145,32 +145,7 @@ export default function HeroSection() {
           />
         </div>
 
-        {/* ── MOBILE: simplified flat pills ── */}
-        <div className="sm:hidden w-full flex flex-wrap gap-3 justify-center">
-          {[
-            { color: 'blue'   as const, icon: Receipt,     label: 'Billing'   },
-            { color: 'orange' as const, icon: Milestone,   label: 'Matters'   },
-            { color: 'dark'   as const, icon: CheckSquare, label: 'Tasks'     },
-            { color: 'dark'   as const, icon: FileText,    label: 'Documents' },
-          ].map(({ color, icon, label }, i) => (
-            <motion.div
-              key={label}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + i * 0.12, duration: 0.5 }}
-            >
-              <FloatingCard
-                color={color}
-                rotation={0}
-                icon={icon}
-                label={label}
-                floatDelay={i * 0.3}
-                floatDuration={5 + i}
-                entranceDelay={0}
-              />
-            </motion.div>
-          ))}
-        </div>
+        
       </div>
     </section>
   )
