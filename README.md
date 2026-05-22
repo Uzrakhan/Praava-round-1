@@ -13,6 +13,7 @@ A modern legal-tech landing page built for the Praava frontend assessment using 
 - Dark / Light mode toggle
 - Framer Motion animations
 - Mobile responsive layout
+- Pills are hidden on mobile devices
 - Modern SaaS-inspired UI
 - Lucide React icons
 - Optimized for Vercel deployment
